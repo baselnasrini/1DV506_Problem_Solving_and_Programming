@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HTML lang=en xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+   <HEAD>
+    <link rel="stylesheet" type="text/css" href="assignment.css">
+      <TITLE>1DV006 - Assignment 1</TITLE>      
+   </HEAD>
+   <BODY text=#000000 vLink=#551a8b aLink=#ff0000 link=#0000ee bgColor=#ffffff>
+	
+<H4 style=color:#0000cc>1DV506, Problem Solving and Programming, Autumn 2016</H4>
+ <hr/ style=color:#0000cc>  
+<H1 style=color:#0000cc>Assignment 1: Getting Started</H1>
+<hr/ style=color:#0000cc>
+   
+   
+   <H4>Problems?</H4> 
+   Do not hesitate to ask your teaching assistant at the practical meetings (or Jonas at the lectures) 
+   if you have any problems. You can also post a question in the assignment forum in Moodle.  
+   </P>
+     
+  <H2 style=color:#0000cc>Exercises</H2>
+	
+      <OL>
+		
+		<h3 style=color:#0000cc>Lecture 1 (Getting Started)</h3>
+		<LI><B>Install Java</B></BR>
+			Download and install Java SE JDK: <a href="http://www.oracle.com/technetwork/java/javase/downloads"> www.oracle.com/technetwork/java/javase/downloads</a>.
+	      	Also, there are plenty of instruction videos available in YouTube. Just search for 
+	      	"Install Java X" where X is your operating system.
+	      </LI>
+	      <P/>
+	      
+	    <LI><B>Install Eclipse</B></BR>
+			Download and install Eclipse IDE for Java Developers: <a href="http://www.eclipse.org/downloads/"> http://www.eclipse.org/downloads/</a>.
+			Once again, there are plenty of instruction videos available in YouTube. Just search 
+			for "Install Eclipse X" where X is your operating system.
+	      
+	      </LI>
+	      <P/>
+
+       <LI><B>Setup Eclipse Workspace</B></BR>
+	      Before you start programming, do the following.
+	     <UL>
+	     <LI>
+		Create an Eclipse <em>workspace</em> (a folder) with the name <tt>java_courses</tt> on some location in 
+		your home directory.
+	     <LI> Create a <EM>Java project</EM> with the name <TT>1DV506</TT> inside the workspace.
+	     <LI> Create a <em>package</em> with the name <TT>YourLnuUserName_assign1</TT> inside the 
+	     project. For example, it might look something like  <TT>wo222ab_assign1</TT>.
+	     <LI> Save all program files from the exercises in this assignment inside the  package <TT>YourLnuUserName_assign1</TT>.
+
+	     <LI> In the future: create a new package (<TT>YourLnuUserName_assignX</TT>) for each assignment and a new 
+	     project (with the course code as name) for each new course using Java.
+	     </UL>
+	      </LI>
+	      <P/>
+      
+	      <LI><B>Edit, compile and execute.</B></BR>
+	      Create, compile and execute the following program inside your assignment 1 package:
+	      <PRE>
+
+   /* The classical "Hello World!" program. */
+   public class Hello {
+      
+       public static void main(String[] args) { 	
+          System.out.println("Hello World!"); // Print
+       }	      
+   }
+	      </PRE>
+	      </LI>
+	      <P/>
+	      
+<h3 style=color:#0000cc>Lecture 2 - (Input/Output, Operations on Primitive Types)</h3>	      
+	      
+	      <LI><B>Printing</B></BR>
+	     Write a program <TT>Print.java</TT>, which will print the phrase <EM>Knowledge is power!</EM>
+
+	     <UL>
+	     <LI> on one line,
+	     <LI> on three lines, one word on each line,
+	     <LI> inside a rectangle made up by the characters = and |.
+	     </UL>
+	     
+	     </LI>
+	     <P/>
+	     
+<!--    
+	     <LI><B>Input</B></BR>
+
+	     Write a program <TT>ReadName.java</TT>, that uses the class <TT>Scanner</TT> for 
+	     reading a first name and a last name (given name and family name). After that the 
+	     full name should be printed on one line. An example of an execution:
+	      <PRE>
+    Give a first name:  James
+    Give a last name:  Bond
+    
+    Full name: James Bond
+	      </PRE>
+	     </LI>
+	     <P/>
+-->	     
+	     		
+	     <li><b>Quote</b><br/>
+ 		Write a program <TT>Quote.java</TT> which reads a line of text (using class <TT>Scanner</TT> ) 
+ 		and then prints the same line as a quote (that is inside <TT>" "</TT>).
+ 		An example of an execution:
+ 		<PRE>
+    Write a line of text:  I wish I was a punk rocker with flowers in my hair.
+    Quote: "I wish I was a punk rocker with flowers in my hair."
+		</PRE>
+		</li>
+		<p/>
+	     
+<!--	     
+	     <LI><B>Read real numbers</B></BR>
+
+	     Write a program <TT>Compute.java</TT> using the class <TT>Scanner</TT> to read two real numbers, 
+	     compute and print their sum, difference and product.	     </LI>
+	     <P/>
+-->	     
+	     <LI><B>Number of seconds</B></BR>
+	     Write a program <TT>Seconds.java</TT> which reads three integers (hours, minutes, seconds) 
+	     and then computes the corresponding time measured in seconds. For example, 1 hour, 28 minutes 
+	     and 42 seconds is equal to 5322 seconds. An example of an execution: 
+		<pre>
+     Hours: 1
+     Minutes: 28
+     Seconds: 42
+
+     Total time measured in seconds: 5322
+		</pre>
+	     </LI>
+	     <P/>
+	     
+
+	     
+	     <li><b>BMI</b><br/>
+		Write a program <tt>BMI.java</tt> which computes the BMI (Body Mass Index) for a person. 
+		The program will read length and weight from the keyboard and then present the result as 
+		output. The BMI is computed as weight/(length)^2, where the length is given in meters and 
+		the weight in kilograms. An example of an execution: 
+		<pre>
+    Give your length in meters: 1,83
+    Give your weight in kilograms: 83
+    Your BMI is: 25
+		</pre>
+		Note: the BMI is always an integer. 
+		</li>
+		<p/>
+		
+		<li><b>Time</b><br/>
+Write a  program <tt>Time.java</tt>, which reads a number of seconds (an integer) and then prints 
+the same amount of time given in hours, minutes and seconds. An example of an execution:
+<pre>
+    Give a number of seconds: 9999
+    This corresponds to: 2 hours, 46 minutes and 39 seconds.
+</pre>
+Hint: Use integer division and the modulus (remainder) operator.
+</li>
+<p/>
+
+
+
+<li><b>Sum of Three</b><br/>
+Write a  program <tt>SumOfThree.java</tt> which asks the user to provide a three digit number. 
+The program should then compute the sum of the three digits. For example:
+<pre>
+    Provide a three digit number: 483
+    Sum of digits: 15
+</pre>
+</li>
+<p/>
+
+<h3 style=color:#0000cc>If Time Permits</h3>
+Exercise 11 is marked as <em>VG task</em> ==> only mandatory for those of you that aspire for a higher mark (A or B).<p/>
+	     
+	     <LI><B>Change</B> (VG-task)</BR>
+	     Write a program <tt>Change.java</tt> that computes the change a customer should receive 
+	     when he has paid a certain sum. The program should exactly describe the minimum number 
+	     of Swedish bills and coins that should be returned rounded off to nearest krona (kr). 
+	     Example:
+	     <PRE>
+Price: 372.38
+Payment: 1000
+
+Change: 628 kronor
+1000kr bills: 0
+ 500kr bills: 1
+ 100kr bills: 1
+  50kr bills: 0
+  20kr bills: 1
+  10kr coins: 0
+   5kr coins: 1
+   1kr coins: 3
+	</PRE>	     
+	     </LI>
+	     <P/>
+	     
+
+<h3 style=color:#0000cc>Lecture 3 - Using Library Classes</h3>
+
+<li><b>Fahrenheit to Celsius</b><br/>
+Write a  program <tt>Convert.java</tt>, which reads a temperature in Fahrenheit and 
+then converts it to Celsius using the formula:
+<pre>
+    C = (F-32)*5/9
+</pre>
+The result should be presented with a single decimal correctly rounded off.
+</li>
+<p/>
+
+<li><b>Short Name</b><br/>
+Write a program ShortName.java, reading a first name and a last name (given name and family name) as two Strings. The output should consist of the first letter of the first name followed by a dot and a space, followed by the first four letters of the last name. An example of an execution:
+<pre>
+    First name: Anakin
+    Last name: Skywalker
+    Short name: A. Skyw
+</pre>
+Hint: Use methods of the String class.<br/>
+What will happen if the last name consists of less than four letters?
+</li>
+<p/>
+
+
+<li><b>Random Number</b><br/>
+Write a program <tt>TelephoneNumber.java</tt>, generating and printing a random telephone number 
+of the form <tt>0XXX-ZYYYYY</tt>. The area code consists of a zero followed by three digits (X). 
+The local number can not start with a zero (Z), all other digits (Y) are random.<br/>
+
+Hint: Use the class <tt>java.util.Random</tt>. 
+</li>
+
+<p/>
+
+<li><b>Square Root</b><br/>
+Write a program <tt>Distance.java</tt> which reads two coordinates in the form (x,y) and then 
+computes the distance between the points, using the formula
+<pre>
+distance = Sqrt( (x1-x2)^2 + (y1-y2)^2 )
+</pre>
+Sqrt() means "the square root of" and ^ means "raised to". The answer should be presented with 
+three decimal digits.<br/>
+
+Hint: Use the class <tt>java.lang.Math</tt> for the computations.
+</li>
+<p/>
+
+<h3 style=color:#0000cc>If Time Permits</h3>
+Exercise 16 is marked as <em>VG task</em> ==> only mandatory for those of you that aspire for a higher mark (A or B).<p/>
+
+<LI><B>Wind Chill</B> (VG-task)</BR>
+
+	     Write a program <TT>WindChill.java</TT> that asks the user for a temperature (°C) 
+	     and the wind speed (measured in m/s) and then computes the so-called <em>wind chill temperature</em> using
+	     <a href="http://www.lenntech.com/calculators/wind/wind-chill.htm"> Siple's formula.</a>
+	      
+	     For example:
+	      <PRE>
+    Temperature:  -7.8
+    Wind speed:  8.4
+    
+    Wind Chill Temperature: -24.5
+	      </PRE>
+	     </LI>	     
+	     <P/>
+
+	      
+</OL>
+<pre>
+
+
+</pre>
+<hr style=color:#0000cc>  
+<h2 style=color:#0000cc>Submission</h2>
+Only exercises 5-16 should be handed in. (Notice that the VG exercises 11 and 16 are not mandatory.) 
+We are only interested in your .java files. Hence, zip the directory named <TT>YourLnuUserName_assign1</TT> 
+(inside directory named <tt>src</tt>) and submit it using the Moodle submission system.
+
+   </BODY>
+</HTML>
+
+

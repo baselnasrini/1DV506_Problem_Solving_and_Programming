@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+                      "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<link rel="stylesheet" type="text/css" href="assignment.css">
+<title>1DV506: Assignment 3</title> 
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE"  
+      vlink="#551A8B" alink="#FF0000">
+
+<H4 style=color:#0000cc>1DV506, Problem Solving and Programming, Autumn 2016</H4>
+<hr/ style=color:#0000cc>
+<h1 style=color:#0000cc>Assignment 3: Methods and Classes</h1>
+<hr/ style=color:#0000cc>
+
+<b>Problems?</b><br/>
+Do not hesitate to ask your teaching assistants at the practical meetings (or Jonas at the lectures) 
+if you have any problems. You can also post a question in the assignment forum in Moodle.  
+<p/>
+
+<h4>Prepare Eclipse for Assignment 3</h4>
+Create a new <em>package</em> with the name <TT>YourLnuUserName_assign3</TT> inside the 
+Java project <TT>1DV506</TT> and save all program files for this assignment inside that  package.
+<p/>
+
+<h3 style=color:#0000cc>Lecture 6 - Methods</h3>
+
+In exercises 1 and 2 below you are supposed to create a number of static methods. They should all 
+be created inside the same class that contains the <tt>main</tt> method. The <tt>main</tt> method 
+should work as test program that demonstrates how the different methods in your class can be used. 
+
+<ul>
+<li><b>Exercise 1</b><br>
+
+Create a class <tt>Arrays.java</tt> that apart from the <tt>main</tt> method also contains the 
+following <b>static</b> methods: 
+<ul>
+<li> Method <tt>int sum(int[] arr)</tt>, adding all elements of the array <tt>arr</tt> and returning the sum.
+<li> Method <tt>String toString(int[] arr)</tt>, creating a string containing a nice-looking print out of      
+the content of the array. It should be possible to use it in the following way.	
+     <pre>
+     int[] n = {3,4,5,6,7};
+     String str = Arrays.toString(n);
+     System.out.println("n = " + str);
+     </pre>
+<li> Method <tt>int[] addN(int[] arr, int n)</tt>, creating and returning a new array, where               
+<tt>n</tt> have been added to all elements in <tt>arr</tt>. Array <tt>arr</tt> should be left         
+unchanged.
+<li> Method <tt>int[] reverse(int[] arr)</tt>, creating and returning a new array, consisting of 
+all elements in <tt>arr</tt> in  reverse order. Array <tt>arr</tt> should be left unchanged. 
+
+<li> Method <tt>boolean hasN(int[] arr, int n)</tt>, returning <tt>true</tt> if <tt>n</tt> is      
+contained in the array <tt>arr</tt>, <tt>false</tt> otherwise.   
+<li> Method <tt>void replaceAll(int[] arr, int old, int nw)</tt>, replacing all occurrences of      
+<tt>old</tt> with <tt>nw</tt> in <tt>arr</tt>.
+
+<li> Method <tt>int[] sort(int[] arr)</tt>, returning a new sorted array (increasing order), 
+containing the same set of integers as <tt>arr</tt>. Array <tt>arr</tt> should be left unchanged. 
+<li> Method <tt>boolean hasSubsequence(int[] arr, int[] sub)</tt>, returning true if     
+the sequence <tt>sub</tt> is a subsequence of array <tt>arr</tt>, <tt>false</tt> otherwise. 
+The case <tt>hasSubsequence({1,2,3,4,5}, {3,4,5})</tt> should return <tt>true</tt> since     
+<tt>{3,4,5}</tt> is a part of <tt>{1,2,3,4,5}</tt>. The case <tt>hasSubsequence({1,2,3,4,5}, {1,3,5})</tt> 
+should return <tt>false</tt> since the exact sequence of elements    
+<tt>{1,3,5}</tt> cannot be found in <tt>{1,2,3,4,5}</tt>.
+</ul>
+<b>Notice: </b> You are supposed to implement all these methods from scratch without any use of 
+the array related methods in the Java library.
+<p/>
+</p>
+</li>
+
+<li><b>Exercise 2</b><br>
+Create a class <tt>SweID.java</tt> that apart from the <tt>main</tt> method also contains a number 
+of static methods related to the Swedish identity number in the form <tt>YYMMDD-NNNN</tt>. 
+Information about the structure of Swedish identity numbers can be found at Wikipedia
+(<a href="http://en.wikipedia.org/wiki/Personal_identity_number_(Sweden)">Wikipedia: Personal identity number (Sweden)</a>). 
+<p/>
+We expect you to consider each ID number as a single string of type <tt>"YYMMDD-NNNN"</tt>. The class should contain the following static methods: 
+<ol>
+<li> Methods <tt>getFirstPart</tt> and <tt>getSecondPart</tt>, returning the first part (YYMMDD) and 
+second part (NNNN) of the identity number, respectively.</li>
+<li> <tt>isFemaleNumber, isMaleNumber</tt>, returning <tt>true</tt> if the personal identity number 
+belongs to a woman or a man, respectively.</li>
+<li> <tt>areEqual</tt>, comparing two ID numbers checking if they correspond to the same 
+identity number.</li>
+<li> <b>(VG-exercise)</b> <tt>isCorrect</tt>, returning <tt>true</tt> if the number is a correct identity number. 
+To get a passed result you have to check that the date is correct (i.e. the year, month and day should be correct). 
+You must also check that the last digit of the number is correct according to the rules given in the link above.
+
+</ol>
+Feel free to add more methods, if you think anything is missing. Suitable types for arguments and 
+return values are up to you to decide.<br>
+Examples:
+<ul>
+<li>640123-8826 is a correct female number</li>
+<li>550414-0913 is a correct male number</li>
+<li>551314-0913 is not correct number (unvalid month)</li>
+<li>550414-0912 is not correct number (unvalid last digit)</li>
+</ul>
+<em>Clarification: all students are supposed to do subtasks 1, 2, and 3. To get the highest 
+grades you must also do subtask 4.</em>
+</li>
+<p/>
+</p>
+</ul>
+
+
+<h3 style=color:#0000cc>Lecture 7 - Create Your Own Classes</h3>
+In the exercises below you are supposed to create your own classes. We  also want that you, for each class 
+(e.g. <tt>MultiDisplay</tt>), to create a test program (e.g. <tt>MultiDisplayMain</tt>) containing a <tt>main</tt> 
+method that demonstrates how the different methods in your class can be used.
+
+<ul>
+<li><b>Exercise 3</b><br>
+Create a class <tt>MultiDisplay</tt> that when executed using this code: 
+<pre>
+MultiDisplay md = new MultiDisplay();
+		
+md.setDisplayMessage("Hello World!");
+md.setDisplayCount(3);
+md.display();                           // ==> print-out
+		
+md.display("Goodbye cruel world!", 2);  // ==> print-out
+		
+System.out.println("Current Message: "+ md.getDisplayMessage());
+</pre>
+results in the following console print-out:
+<pre>
+Hello World!
+Hello World!
+Hello World!
+Goodbye cruel world!
+Goodbye cruel world!
+Current Message: Goodbye cruel world!
+</pre>
+The class  <tt>MultiDisplay</tt> should of course be able to handle other messages and other 
+numbers of display counts.
+</li>
+<p>
+
+<li><b>Exercise 4</b><br>
+Download and install the class 
+<a href="AlarmClock.zip"><tt>AlarmClock</tt></a>.
+Then write a program <tt>AlarmMain</tt> that uses <tt>AlarmClock</tt> to:
+<ol>
+<li> Set clock time to 23:48
+<li> Display time
+<li> Set alarm to wake up at 6:15
+<li> Let the clock "tick" for 500 minutes
+<li> Display time again 
+</ol>
+<b>Notice:</b> You are not allowed to make any changes in the <tt>AlarmClock</tt> class 
+except maybe to change the package name.
+</li>
+<p>
+
+
+
+<li><b>Exercise 5</b><br>
+Create a class  <tt>TextAnalyzer</tt> that when executed using this code:
+<pre>
+String text = "My name is Anakin Skywalker. My age is 42.";
+TextAnalyzer ta = new TextAnalyzer(text);
+		
+System.out.println("Char Count: "+ ta.charCount());
+System.out.println("Upper Case Count: "+ ta.upperCaseCount());
+System.out.println("Whitespace Count: "+ ta.whitespaceCount());
+System.out.println("Digit Count "+ ta.digitCount());
+		
+if (ta.containsChar('x'))
+	System.out.println("The text contains char \'x\'");
+		
+if (ta.containsString("nakin"))
+	System.out.println("The text contains substring \"nakin\"");
+</pre>
+results in the following console print-out:
+<pre>
+Char Count: 42
+Upper Case Count: 4
+Whitespace Count: 8
+Digit Count 2
+The text contains substring "nakin"
+</pre>
+The class <tt>TextAnalyzer</tt> should of course be able to handle other texts in a correct way.
+The methods  <tt>containsChar</tt> and <tt>containsString</tt> should of course also give a correct 
+result (true/false) for other characters and strings.
+</li>
+<p>
+
+<li><b>Exercise 6</b><br>
+Create a class <tt>Point</tt> that when executed using this code:
+<pre>
+Point p1 = new Point();
+Point p2 = new Point(3,4);
+		
+System.out.println(p1.toString());   // ==> (0,0)
+System.out.println(p2.toString());   // ==> (3,4)
+		
+if (p1.isEqualTo(p2))              // False!
+	System.out.println("The two points are equal");
+		
+double dist = p1.distanceTo(p2);
+System.out.println("Point Distance: "+dist);
+		
+p2.move(5,-2);         // ==> (8,2)
+p1.moveToXY(8,2);      // ==> (8,2)
+		
+if (p1.isEqualTo(p2))              // True!
+	System.out.println("The two points are equal");
+</pre>
+results in the following console print-out:
+<pre>
+(0,0)
+(3,4)
+Point Distance: 5.0
+The two points are equal
+</pre>
+The class <tt>Point</tt> should of course be able to handle other points with different (x,y) values.
+<b>Notice:</b>
+<ul>
+<li> The coordinates (x,y) are always integers.
+<li> The method <tt>toString</tt> returns a string with coordinates suitable for print-outs.
+<li> Distance between two points is computed in the same way as in Exercise 15, Assignment 1.
+<li> Two points are <em>equal</em> if they have the same coordinates.
+<li> Method <tt>move</tt> moves the point certain steps in x- and y-direction. 
+<li> Method <tt>moveToXY</tt> provide a new set of coordinates. 
+</ul>
+</li>
+<p>
+
+</ul>
+
+
+<h3 style=color:#0000cc>Lecture 8 - More Classes</h3>
+
+This section contains a number of exercises where you are supposed to create you own classes. 
+For each task, we expect a <tt>Main</tt> class, showing how all methods in the class or classes work. 
+For example, for the class <tt>Fraction.java</tt> there should be a class <tt>FractionMain.java</tt> showing 
+how all methods of <tt>Fraction.java</tt> can be used.
+
+<p>
+All classes are supposed to be commented and follow principles such as encapsulation.
+<ul>
+
+
+
+<li><b>Exercise 7</b><br>
+Create a class <tt>Fraction.java</tt>, representing a fractional number of the form <tt>N/D</tt>, where <tt>N</tt> (the numerator) and <tt>D</tt> (the denominator) both are integers. If the denominator is equal to zero, an error message should be printed.
+
+The class should include the following members:
+<ol>
+<li> A constructor, creating and initializing a new fractional number.</li>
+<li> Methods <tt>getNumerator</tt> and <tt>getDenominator</tt>, returning the numerator or denominator, respectively.</li>
+<li> Method <tt>isNegative</tt>, returning <tt>true</tt> if the fractional number is negative.
+
+<li> Methods <tt>add, subtract, multiply, divide</tt>, performing the corresponding operations on two fractional numbers and returning a new fractional number. It is up to you to decide a proper way of handling the case when one of the fractional numbers have a zero denominator.</li>
+<li> <tt>isEqualTo</tt>, comparing two <tt>Fraction</tt>-instances, checking if they correspond to the same fractional number.</li>
+<li> <tt>toString</tt>, returning a string representation of the fractional number on the form <tt>N/D</tt>.</li>
+
+</ol>
+Feel free to add more methods, if you think anything is missing. Suitable argument and return types are up to you to decide.
+<p/>
+<b>Extra, voluntary work if you are interested in mathematics:</b> 
+Make sure that the fractional number is in the most simplified  form possible. For example, the fractional numbers <tt>2/4</tt> and <tt>35/50</tt> should internally be represented as <tt>1/2</tt> and <tt>7/10</tt>. This means that the internal representation always should be the two smallest integers <tt>N</tt> and <tt>D</tt> corresponding to the given fractional number. Useful information can be found at Wikipedia: <a href="http://en.wikipedia.org/wiki/Euclidean_algorithm">Euclidean algorithm</a>.
+</li>
+<p/>
+
+<li><b>Exercise 8 </b><br>
+Create a class <tt>Card</tt>, representing a playing card in an ordinary card deck with 52 cards. 
+A card has a <em>suite</em> (4 different) and a <em>rank</em> (13 different). Write a class 
+<tt>Deck</tt> initially containing 52 different objects of the class <tt>Card</tt>. 
+The class <tt>Deck</tt> should contain methods for shuffling the deck, deal a card and telling 
+how many cards are still in the deck. Note that it should only be possible to shuffle a deck if 
+it contains 52 cards. (Information at Wikipedia about <a href="http://en.wikipedia.org/wiki/Card_deck">card
+decks</a> and <a href="http://en.wikipedia.org/wiki/Card_game">card games</a>.)
+<p/>
+Also write a program <tt>PlayCardsMain</tt>, creating a card deck and dealing some cards, telling the 
+number of remaining cards and which cards that have been dealt.<p/>
+<b>Hint</b>: Use enumeration types.
+</li>
+</p>
+
+</p><li><b>Exercise 9 (VG-exercise)</b><br>
+In this exercise you should use the <tt>Deck</tt> class from the previous exercise.
+
+In the patience (single player card game) 1-2-3 you take one card at a time from the deck at 
+the same time as you are counting  1,2,3,1,2,3,1,2,3 etc. You lose the game as soon as you 
+get an Ace when counting "one", a 2 card when counting "two", or a 3 card when counting "three".
+The chances to win, to make it through the whole deck without losing, are quite small. But how small?
+
+<p/>
+Write a program <tt>Play123Main</tt> that plays the 1-2-3 game 10000 times and then computes the probability (%)
+that you win the game. The program should use a method <tt>play123</tt> that plays the game once and reports
+<tt>true</tt> if you win (or <tt>false</tt> if you lose) that particular game.
+</li>
+
+<!--
+<li><b>Exercise 10 (VG-exercise)</b>  (The Drunken Walker)<br>
+Create a class <tt>RandomWalk.java</tt>, simulating a random walk. A random walk is basically a sequence 
+of steps in some enclosed plane, where the direction of each step is random. The walk terminates when 
+a maximal number of steps have been taken or when a step goes outside the given boundary of the plane.<p/> 
+
+For this task, assume a plane given by a grid, with the point (0, 0) at the center. The size of the 
+plane is given by an integer; if the given integer is <em>k</em>, then the values of the <em>x</em> 
+and <em>y</em> coordinates can vary from -<em>k</em> to <em>k</em>. Each step will be one unit up, 
+one unit down, one unit to the right or one unit to the left (no diagonal movements).<p/>
+
+The class <tt>RandomWalk</tt> will have the following instance data :
+
+<ul>
+<li> X coordinate of the current position
+<li> Y coordinate of the current position
+<li> The maximum number of steps in a walk
+<li> The number of steps taken so far in the walk
+<li> The size of the plane (according to the description above)
+</ul>
+<p/>
+
+<b>Other members</b><br/>
+<ul>
+
+<li><tt>RandomWalk(int max, int edge)</tt>: 
+the maximum number of steps is <tt>max</tt> and <tt>edge</tt> is the size of the plane. The start position is set to (0, 0). <br/>
+
+<li><tt>String toString()</tt>: returns a string containing the number of steps taken so far and the current position.<br/>
+
+<li><tt>void takeStep()</tt>: 
+simulates taking a single step. Generate a random number, taking on four different values, and let them correspond to a 
+movement up, down, to the right and to the left, respectively. The method should also increase the number of steps taken.<br/>
+
+<li><tt>boolean moreSteps()</tt>: 
+returns <tt>true</tt> if the number of steps taken is less than the maximal number of steps, otherwise <tt>false</tt> is returned.<br/>
+
+<li><tt>boolean inBounds()</tt>: 
+returns <tt>true</tt> if the current position is inside the boundary of the plane, otherwise <tt>false</tt> is returned.<br/>
+
+<li><tt>void walk()</tt>: 
+simulates a random walk, i.e. steps are taken until the maximum number of steps has been taken or 
+until a step goes outside the boundary of the plane.<br/>
+</ul>
+<p/>
+
+<b>Simulation</b><br/>
+Create another class <tt>DrunkenWalk</tt>, simulating walks of drunken people on a platform in a lake. The program should read the boundary, the maximum number of steps, and the number of drunks to simulate. One drunk at a time should be put on the platform and perform its walk. Your program should count how many drunks fall into the water. Test your program for some different values of size and number of steps.
+
+Example of an execution:
+<pre>
+   Enter the size: 10
+   Enter the number of steps: 50
+   Enter the number of walks: 150
+   Out of 150 drunk people, 14 (9.34%) fell into the water.
+</pre>
+ 
+</li>
+<p/>
+-->
+
+<!--
+
+<li><b>Uppgift 10</b><br>
+Skapa en klass <tt>Task.java</tt> som representerar uppgifter. En uppgift innehåller
+en kortfattad beskrivning, datum då den skall påbörjas respektive
+avslutas samt en prioritet(kritisk, hög, låg, normal, avslutad). Förse
+klassen med lämpliga metoder. När en uppgift är avslutad så kan den
+inte återupptas och då är prioriteten "avslutad". Varje objekt har en
+metod som heter <code>void omprioritera(...)</code>. Den anropas med
+dagens datum och förändrar eventuellt prioriteten på uppgiften. Om det
+återstår mer än en vecka skall prioriteten vara låg. Om det
+återstår mindre än 3 dagar skall prioriteten sättas till
+hög. Prioriteten skall sättas till kritisk om dagens datum är lika med eller senare
+än beräknat avslutsdatum. Använd klassen <code>java.util.Calendar</code> för all datumhantering.
+
+</li>
+<p/>
+
+<li><b>Uppgift X</b><br>
+Skapa tre klasser som kan representer en Rektangel, en Cirkel och
+en Triangel. Varje klass skall innehålla metoder för att beräkna arean
+samt en enkel metod <code> void Flytta(Xrelativt,Yrelativt)</code>
+(parametrarna anger en relativ förflyttning).  Dessutom skall andra
+nödvändiga metoder finnas. Kopplad till varje objekt av dessa klasser
+skall det finnas ett koordinatobjekt som innehåller en X- och en
+Y-koordinat samt lämpliga metoder.
+
+<p>I ditt testprogram skall du visa att de metoder du beskrivit i klasserna fungerar. 
+Koden skall dokumenteras i kommentarer. 
+</li>
+<p/>
+-->
+
+</ul>
+
+<!--
+<h4>Graphics</h4>
+<ul>
+<li><b>Exercise 4</b><br>
+Write a class <tt>ChessPanel</tt> (extends JPanel), creating a pattern of NxN black and white squares in itself, 
+like in a chessboard. The integer N is given as a parameter to the constructor. Each small square is represented 
+by the class <tt>SquarePanel</tt> (extends JPanel). The chesspanel should always have the size of  500x500 pixels. 
+That means that the size of the squares must be adjusted to N. Also, write a test program <tt>ChessMain.java</tt>, 
+starting a number of frames with different values of N.
+</li>
+<p/>
+
+<li><b>Exercise 5</b><br>
+Create a class <tt>RandomPanel</tt> (extends JPanel) containing two panels.  One of the panels should contain a 
+button with the text <tt>New Random</tt>. When the button is pressed a random number in the interval 1-100 is 
+generated and shown in the other panel. Try to change the size of the text so that the number 100 fills the panel. 
+Also, write a test program <tt>RandomMain.java</tt> starting a frame containing a <tt>RandomPanel</tt>.
+</li>
+
+<p/>
+
+<li><b>Exercise 6 (VG-exercise)</b><br>
+Write a GUI program <tt>ColorDisplay.java</tt>. When the button ”Display Color” is pressed, three integers (red, green, blue) are read and the color of the upper panel is changed according to the values of the integers. Use three components of the type JTextField to read the integers. The picture below shows how the execution of the program can look.  
+</p>
+<center>
+  <img src="./color_display.png"><br></p>
+</center>
+<p>
+If erroneous values of the integers are read, an error message should be printed and the upper panel should not be updated. The most important thing is that the program is working properly. It is also important for the program to have a good structure to make it easy to follow and to understand. Divide big methods and big classes into smaller ones, if necessary.
+</ul>
+
+<h4>Arrays and Lists (Chapter 7)</h4>
+
+<ul>
+
+<li><b>Exercise 7</b><br>
+Complete the program  <tt>Backwards.java</tt> below such that:
+<ol>
+<li> It first prints the content of the array <tt>text</tt>.
+<li> Reorder the array elements backwards (in opposite order) by shifting place of 
+first and last character, second and second to last character, etc.
+<li> Then print the array content one more time.
+</ol>
+
+<pre>
+public class Backwards {
+   public static void main(String[] args) {
+      char[] text = { 't', 't', 'a', 'l', ' ', 'r', 'a', 'v', ' ', 'a', 
+         			't', 't', 'e', 'D' };
+         			
+      // Continue here ...
+   }
+}
+</pre>
+<b>Notice:</b> You should not only print them backwards. You should also swap places of the elements in the array.
+</li>
+<p>
+
+<li><b>Exercise 8</b><br>
+Create a program <tt>Reverse.java</tt>, reading any number of positive integers from the 
+keyboard and then printing them in reverse order. The reading stops when the user inputs a 
+negative number. An example of an execution:  
+
+<pre>
+Enter positive integers. End by giving a negative integer.
+Integer 1: 5
+Integer 2: 10
+Integer 3: 15
+Integer 4: 20
+Integer 5: -7
+
+Number of positive integers: 4
+In reverse order: 20, 15, 10, 5
+</pre>
+<b>Note</b>: The user is not supposed to give the number of integers to enter. 
+</li>
+<p/>
+
+</p><li><b>Exercise 9</b><br>
+Write a program <tt>FrequencyTable.java</tt> that simulates that you are rolling a dice 6000 times.
+At the same time, keep track of the number of times you get the result 1, 2, .... (Use an array to save the numbers.)
+After the simulation, present the frequncies for the different numbers.  
+An example of an execution: 
+<pre>
+Frequencies when rolling a dice 6000 times. 
+1: 1025
+2: 996
+3: 980
+4: 1006
+5: 1035
+6: 958
+</pre>
+</li>
+<p/>
+
+</p><li><b>Exercise 10</b><br>
+When the union is reporting about the latest salery negotiations they are presenting 
+the <em>average salery</em>, the  <em>median salery</em>, and the  <em> salery gap</em>
+for the workers that they represent. Write a program <tt>SaleryRevision.java</tt> that reads 
+an arbtrary number of saleries (integers) and then reports the median and average saleries, 
+and the salery gap.<p/>
+By <em> salery gap</em> we mean the difference betwen the highest and lowest saleries. The 
+<em>median salery</em> is the middle salery (or average of the two middle saleries) when all 
+saleries have been sorted. The easiest way to sort an <tt>ArrayList</tt> is to use the static <tt>sort</tt> 
+method in class <tt>java.util.Collections</tt>. <p/>
+
+An execution might look like this:
+
+<pre>Provide saleries: 21700 28200 26300 25100 22600 22800 19900
+Median: 22800
+Average: 23800
+Gap: 8300
+
+Provide saleries:: 22100 29800 27300 25400 23100 22300
+Median: 24250
+Average: 25000
+Gap: 7700
+</pre>
+</li>
+
+
+<li><b>Exercise 11</b><br>
+Create a program <tt>Histogram.java</tt>,  reading any number of integers from a file and then printing a histogram bar-chart for all integers between 1 and 100. Note:  not all integers in the file need to be in the interval [1-100]. An example of an execution: 
+<pre>
+Reading integers from the file: C:\Temp\integers.dat
+Number of integers in the interval [1,100]: 46
+Others: 16
+Histogram
+  1  - 10  | ******
+  11 - 20  | ****
+  21 - 30  | **
+  31 - 40  | ***
+  41 - 50  | *******
+  51 - 60  | ****
+  61 - 70  | ***
+  71 - 80  | *********
+  81 - 90  | *****
+  91 - 100 | ***        
+</pre>
+</li>
+<p/>
+
+<li><b>Exercise 12 (VG-exercise)</b><br>
+
+Create a class <tt>Arrays.java</tt>, containing the following <b>static</b> methods: 
+
+<ul>
+<li> Method <tt>int sum(int[] arr)</tt>, adding all elements of the array <tt>arr</tt> and returning the sum.
+<li> Method <tt>String toString(int[] arr)</tt>, creating a string containing a nice-looking print of      the content of the array. It should be possible to use it in the following way.	
+     <pre>
+     int n = {3,4,5,6,7};
+     String str = Arrays.toString(n);
+     System.out.println("n = " + str);
+     </pre>
+<li> Method <tt>int[] addN(int[] arr, int n)</tt>, creating and returning a new array, where               <tt>n</tt> have been added to all elements in <tt>arr</tt>. Array <tt>arr</tt> should be left         unchanged.
+<li> Method <tt>int[] reverse(int[] arr)</tt>, creating and returning a new array, consisting of all       elements in <tt>arr</tt> in  reverse order. Array <tt>arr</tt> should be left unchanged. 
+
+<li> Method <tt>boolean hasN(int[] arr, int n)</tt>, returning <tt>true</tt> if <tt>n</tt> is      contained in the array <tt>arr</tt>, <tt>false</tt> otherwise.   
+<li> Methoden <tt>void replaceAll(int[] arr, int old, int nw)</tt>, replacing all occurrences of      <tt>old</tt> by <tt>nw</tt> in <tt>arr</tt>.
+
+<li> Method <tt>int[] sort(int[] arr)</tt>, returning a new sorted array     (increasing order), containing the same set of integers as <tt>arr</tt>. Array <tt>arr</tt>     should be left unchanged. 
+<li> Method <tt>boolean hasSubsequence(int[] arr, int[] sub)</tt>, returning true if     the sequence <tt>sub</tt> is a subsequence of array <tt>arr</tt>, <tt>false</tt> otherwise. In     the case <tt>hasSubsequence({1,2,3,4,5}, {3,4,5})</tt>, <tt>true</tt> should be returned, since     <tt>{3,4,5}</tt> is a part of <tt>{1,2,3,4,5}</tt>.
+
+</ul>
+Demonstrate the functionality of your class by creating a class <tt>ArraysMain.java</tt>, calling the methods.<p/>
+</li>
+</p>
+
+<li><b>Exercise 13 (VG-exercise)</b><br>
+Create a class <tt>Card</tt>, representing a playing card in an ordinary card deck with 52 cards. A card has a <em>suite</em> (4 different) and a <em>rank</em> (13 different). Write a class <tt>Deck</tt>, at the beginning containing 52 different objects of the class <tt>Card</tt>. The class <tt>Deck</tt> should contain methods for shuffling the deck, deal a card and telling how many cards are still in the deck. Note that it should only be possible to shuffle a deck if it contains 52 cards. (Information at Wikipedia about <a href="http://en.wikipedia.org/wiki/Card_deck">card
+decks</a> and <a href="http://en.wikipedia.org/wiki/Card_game">card games</a>.)
+<p/>
+Also write a program <tt>PlayCardsMain</tt>, creating a card deck and dealing some cards, telling the number of remaining cards and which cards have been dealed.<p/>
+<b>Hint</b>: Use enumeration types.
+</li>
+</p>
+
+</p><li><b>Exercise 14 (VG-exercise)</b><br>
+In this exercise you should use the <tt>Deck</tt> class from the previous exercise.
+
+In the patience (single player card game) 1-2-3 you take one card at the time from the deck at 
+the same time as you are counting  1,2,3,1,2,3,1,2,3 etc. You lose the game as soon as you 
+get an Ace when counting "one", a 2 card when counting "two", or a 3 card when counting "three".
+The chances to win, to make it through the whole deck without losing, are quite samll. But how small?
+
+<p/>
+Write a program <tt>Play123Main</tt> that plays the 1-2-3 game 10000 times and then computes the probability (%)
+that you win the game. The program should use a method <tt>play123</tt> that plays the game once and report
+<tt>true</tt> if you win (or <tt>false</tt> if you lose) that particular game.
+</li>
+</p>
+
+
+</ul>
+</p>
+
+-->
+
+<pre>
+
+
+</pre>
+<hr style=color:#0000cc>
+<h2 style=color:#0000cc>Submission</h2>
+All exercises should be handed in and we are only interested in your .java files.
+(Notice that the VG exercises 2.4, and 9 are not mandatory.)
+ Hence, zip the directory named <TT>YourLnuUserName_assign3</TT> 
+(inside directory named <tt>src</tt>) and submit it using the Moodle submission system.
+
+
+</body>
+</html>
